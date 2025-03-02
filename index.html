@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+
+<body>
+    <input type="file" id="foto" accept="image/*">
+    <div id="preview-foto"></div>
+    <script>
+        const inputFoto = document.getElementById('foto');
+        const previewFoto = document.getElementById('preview-foto');
+
+        inputFoto.addEventListener('change', () => {
+            const arquivo = inputFoto.files[0];
+            const reader = new FileReader();
+
+            reader.onload = () => {
+                const imagem = reader.result;
+                localStorage.setItem('imagem', imagem);
+                previewFoto.style.backgroundImage = `url(${imagem})`;
+            };
+
+            reader.readAsDataURL(arquivo);
+        });
+
+        // Ao carregar a página, verificar se há uma imagem armazenada
+        document.addEventListener('DOMContentLoaded', () => {
+            const imagem = localStorage.getItem('imagem');
+            if (imagem) {
+                previewFoto.style.backgroundImage = `url(${imagem})`;
+            }
+        });
+    </script>
+</body>
+
+</html>

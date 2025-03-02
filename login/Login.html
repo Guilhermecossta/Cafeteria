@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Login.css">
+    <link rel="shortcut icon" href="../img/xicara-de-cafe-quente.png" type="image/x-icon">
+
+
+</head>
+
+<body>
+    <div class="conteudo">
+        <div class="imagem" id="imagem">
+            <h1>Cafeteria</h1>
+        </div>
+        <form action="" id="form">
+            <input type="email" name="" id="email" placeholder="Email">
+            <input type="password" name="" id="password" placeholder="Senha">
+            <input type="submit" value="Entrar" class="btn">
+        </form>
+    </div>
+    <script>
+        const emailvalor = document.getElementById('email')
+        const senhavalor = document.getElementById('password')
+        const form = document.getElementById('form')
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = emailvalor.value.trim();
+            const senha = senhavalor.value.trim();
+
+            if (email === '' || senha === '') {
+                alert('Preencha todos os campos!');
+                return;
+            }
+            if (senha.length <= 8 || senha.length > 15) {
+                alert('Senha tem que ter entre 8 e 15 digitos')
+                return
+            }
+
+            // Redireciona para uma página de sucesso
+            window.location.href = '../BemVindo/BemVindo.html';
+            alert('entrou')
+        });
+    </script>
+    <script>
+        const imagens = [
+            '../img/Foto01.jpg',
+            '../img/Foto02.jpg',
+            '../img/Foto03.jpg',
+            '../img/Foto04.jpg',
+            '../img/Foto05.jpeg'
+        ];
+
+        const imagem = document.getElementById('imagem');
+        const indiceAleatorio = Math.floor(Math.random() * imagens.length);
+        const imagemAleatoria = imagens[indiceAleatorio];
+        imagem.style.background = `url(${imagemAleatoria})`;
+        imagem.style.backgroundPosition = 'center';
+        imagem.style.backgroundSize = 'cover'
+    </script>
+
+</body>
+
+</html>

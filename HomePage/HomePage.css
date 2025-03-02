@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.img_fundo {
+    background-image: url('../img/Foto02.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 600px;
+}
+
+header {
+    padding: 10px;
+
+    .logomarca {
+        display: flex;
+        align-items: baseline;
+
+        h1 {
+            margin: 0 10px;
+        }
+    }
+
+    .conteudo_centro {
+        margin: auto;
+        display: flex;
+        max-width: 900px;
+        justify-content: space-between;
+        align-items: center;
+
+        .login {
+            display: flex;
+            font-size: 19px;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            div {
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+.cafeteria {
+    margin: 0 20%;
+
+    h1 {
+        margin-top: -100px;
+        color: white;
+        font-size: 90px;
+    }
+}
+
+.main_cima {
+    margin: 100px auto;
+    display: flex;
+    max-width: 1100px;
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap-reverse;
+
+    .imagem {
+        background: url('../img/coffee-64.gif');
+        height: 400px;
+        width: 400px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+
+        img {
+            margin-left: -140px;
+            margin-top: 100px;
+            border-radius: 10px;
+            transition: ease 0.3s;
+            box-shadow: 0px 0px 10px black;
+        }
+
+        img:hover{
+            transform: scale(1.2);
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .imagem{
+            width: 300px;
+            height: 300px;
+            margin: auto;
+
+            img{
+                width: 100px;
+                margin-left: -50px;
+            }
+        }
+
+        .texto{
+            margin: 100px auto;
+        }
+    }
+
+    .texto {
+        width: 400px;
+        font-size: 30px;
+        padding: 20px;
+    }
+}

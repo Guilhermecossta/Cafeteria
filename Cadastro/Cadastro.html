@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="shortcut icon" href="../img/xicara-de-cafe-quente.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <!-- <audio id="audio_fundo" autoplay loop>
+        <source src="../audio/videoplayback.m4a" type="audio/mp3">
+    </audio> -->
+    <div class="conteudo">
+        <div class="imagem" id="imagem">
+            <h1>Cafeteria</h1>
+        </div>
+        <form action="" id="form">
+            <div id="campos" class="erro">Preencha todos os campos</div>
+
+            <div id="erroNome" class="erro">Nome Tem que ser maior</div>
+
+            <input type="text" id="nome" placeholder="Nome">
+
+            <input type="email" id="email" placeholder="Email">
+
+            <div id="erroNumero" class="erro"></div>
+
+            <input type="text" id="numero" placeholder="Numero">
+
+            <div id="erroSenha" class="erro">Senha tem que ser entre 8 e 15 digitos</div>
+
+            <input type="password" id="senha" placeholder="Senha">
+
+            <div id="erroConfSenha" class="erro">As senhas tem que ser iguais</div>
+
+            <input type="password" id="conf_senha" placeholder="Confirme a Senha">
+            <input type="submit" value="Cadastrar" class="btn">
+
+            <div class="google"><img width="30px" src="../img/icons8-google-240.svg" alt="">Entre com o Google
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const campos = document.getElementById('campos')
+
+        const form = document.getElementById('form')
+
+        const erroNome = document.getElementById('erroNome')
+
+        const nomeValor = document.getElementById('nome')
+
+        const emailValor = document.getElementById('email')
+
+        const erroNumero = document.getElementById('erroNumero')
+
+        const numeroValor = document.getElementById('numero')
+
+        const erroSenha = document.getElementById('erroSenha')
+
+        const senhaValor = document.getElementById('senha')
+
+        const erroConfSenha = document.getElementById('erroConfSenha')
+
+        const confSenhaValor = document.getElementById('conf_senha')
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = emailValor.value.trim();
+            const senha = senhaValor.value.trim();
+            const senhaIgual = confSenhaValor.value.trim();
+            const nome = nomeValor.value.trim();
+            const numero = numeroValor.value.trim();
+
+
+            if (email === '' || senha === '' || nome === '' || numero === '' || senhaIgual === '') {
+                campos.style.display = 'block'
+                setTimeout(() => {
+                    campos.style.display = 'none';
+                }, 2000);
+                return;
+            }
+            if (nome.length < 3) {
+                erroNome.style.display = 'block';
+
+                setTimeout(() => {
+                    erroNome.style.display = 'none';
+                }, 2000);
+                return
+            }
+            if (numero.length < 11) {
+                erroNumero.style.block = 'block'
+                setTimeout(() => {
+                    erroNumero.style.display = 'none';
+                }, 2000);
+                return
+            }
+            if (senha.length < 8 || senha.length > 15) {
+                erroSenha.style.display = 'block'
+                setTimeout(() => {
+                    erroSenha.style.display = 'none';
+                }, 2000);
+                return
+            }
+            if (senha !== senhaIgual) {
+                erroConfSenha.style.display = 'block'
+                setTimeout(() => {
+                    erroConfSenha.style.display = 'none';
+                }, 2000);
+
+                return
+            }
+
+            window.location.href = '../BemVindo/BemVindo.html';
+        });
+
+
+    </script>
+    <script>
+        const imagens = [
+            '../img/Foto01.jpg',
+            '../img/Foto02.jpg',
+            '../img/Foto03.jpg',
+            '../img/Foto04.jpg',
+            '../img/Foto05.jpeg',
+        ];
+
+        const imagem = document.getElementById('imagem');
+        const indiceAleatorio = Math.floor(Math.random() * imagens.length);
+        const imagemAleatoria = imagens[indiceAleatorio];
+        imagem.style.background = `url(${imagemAleatoria})`;
+        imagem.style.backgroundPosition = 'center';
+        imagem.style.backgroundSize = 'cover'
+    </script>
+</body>
+
+</html>
