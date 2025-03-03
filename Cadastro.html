@@ -47,25 +47,15 @@
 
     <script>
         const campos = document.getElementById('campos')
-
         const form = document.getElementById('form')
-
         const erroNome = document.getElementById('erroNome')
-
         const nomeValor = document.getElementById('nome')
-
         const emailValor = document.getElementById('email')
-
         const erroNumero = document.getElementById('erroNumero')
-
         const numeroValor = document.getElementById('numero')
-
         const erroSenha = document.getElementById('erroSenha')
-
         const senhaValor = document.getElementById('senha')
-
         const erroConfSenha = document.getElementById('erroConfSenha')
-
         const confSenhaValor = document.getElementById('conf_senha')
 
         form.addEventListener('submit', (e) => {
@@ -82,7 +72,7 @@
                 setTimeout(() => {
                     campos.style.display = 'none';
                 }, 2000);
-                return;
+                return
             }
             if (nome.length < 3) {
                 erroNome.style.display = 'block';
@@ -111,11 +101,10 @@
                 setTimeout(() => {
                     erroConfSenha.style.display = 'none';
                 }, 2000);
-
                 return
             }
 
-            window.location.href = '../BemVindo/BemVindo.html';
+            window.location.href = 'BemVindo.html';
         });
 
 

@@ -17,15 +17,19 @@
             <h1>Cafeteria</h1>
         </div>
         <form action="" id="form">
+            <div id="campos" class="erro">Preencha todos os campos</div>
             <input type="email" name="" id="email" placeholder="Email">
+            <div id="erroSenha" class="erro">Senha tem que ser entre 8 e 15 digitos</div>
             <input type="password" name="" id="password" placeholder="Senha">
             <input type="submit" value="Entrar" class="btn">
         </form>
     </div>
     <script>
+        const campos = document.getElementById('campos')
         const emailvalor = document.getElementById('email')
         const senhavalor = document.getElementById('password')
         const form = document.getElementById('form')
+        const erroSenha = document.getElementById('erroSenha')
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -33,17 +37,21 @@
             const senha = senhavalor.value.trim();
 
             if (email === '' || senha === '') {
-                alert('Preencha todos os campos!');
-                return;
+                campos.style.display = 'block'
+                setTimeout(() => {
+                    campos.style.display = 'none';
+                }, 2000);
+                return
             }
-            if (senha.length <= 8 || senha.length > 15) {
-                alert('Senha tem que ter entre 8 e 15 digitos')
+            if (senha.length < 8 || senha.length > 15) {
+                erroSenha.style.display = 'block'
+                setTimeout(() => {
+                    erroSenha.style.display = 'none';
+                }, 2000);
                 return
             }
 
-            // Redireciona para uma página de sucesso
-            window.location.href = '../BemVindo/BemVindo.html';
-            alert('entrou')
+            window.location.href = 'BemVindo.html';
         });
     </script>
     <script>

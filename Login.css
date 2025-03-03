@@ -62,3 +62,20 @@ body {
         }
     }
 }
+
+.erro {
+    color: red;
+    text-align: center;
+    margin: -16px;
+    display: none;
+}
+
+#erroNome,
+#campos {
+    margin-top: 0.1px;
+}
+
+#erroSenha {
+    margin-right: -100px;
+    margin-left: -100px;
+}

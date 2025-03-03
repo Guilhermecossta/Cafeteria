@@ -24,7 +24,6 @@ header {
     }
 
     .conteudo_centro {
-        margin: auto;
         display: flex;
         max-width: 900px;
         justify-content: space-between;
@@ -32,15 +31,47 @@ header {
 
         .login {
             display: flex;
-            font-size: 19px;
+            align-self: center;
 
-            a {
-                text-decoration: none;
-                color: black;
+            .fotoPerfil {
+                width: 40px;
+                height: 40px;
+                background: url('../img/user.png');
+                background-size: cover;
+                background-position: center;
+                border-radius: 100%;
             }
 
-            div {
-                margin: 0 10px;
+            #adicionar {
+                display: none;
+
+                input {
+                    display: none;
+                }
+
+                label {
+                    border-radius: 10px;
+                    margin-top: 6px;
+                    padding: 5px 10px 5px 15px;
+                    font-size: 15px;
+                    background-color: rgba(94, 94, 94, 0.74);
+                    display: block;
+                    width: 105px;
+                    align-items: center;
+                    display: flex;
+                    text-align: center;
+                    cursor: pointer;
+                    font-weight: 600;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: white;
+                    transition: ease 0.5s;
+                }
+                label:hover{
+                    background-color: white;
+                    color:  rgba(94, 94, 94, 0.74);
+                    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.452);
+                    transition: ease 0.2s;
+                }
             }
         }
     }
@@ -80,24 +111,24 @@ header {
             box-shadow: 0px 0px 10px black;
         }
 
-        img:hover{
+        img:hover {
             transform: scale(1.2);
         }
     }
 
     @media screen and (max-width: 1000px) {
-        .imagem{
+        .imagem {
             width: 300px;
             height: 300px;
             margin: auto;
 
-            img{
+            img {
                 width: 100px;
                 margin-left: -50px;
             }
         }
 
-        .texto{
+        .texto {
             margin: 100px auto;
         }
     }
@@ -107,4 +138,9 @@ header {
         font-size: 30px;
         padding: 20px;
     }
+}
+
+#botao{
+    margin: 10px 0 0 0;
+    cursor: pointer;
 }

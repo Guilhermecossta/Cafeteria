@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+.lora {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    font-family: "lora", serif;
+}
+
+.img_fundo {
+    background-image: url('../img/Foto02.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 600px;
+}
+
+header {
+    padding: 10px;
+
+    .logomarca {
+        display: flex;
+        align-items: baseline;
+
+        h1 {
+            margin: 0 10px;
+        }
+    }
+
+    .conteudo_centro {
+        margin: auto;
+        display: flex;
+        max-width: 900px;
+        justify-content: space-between;
+        align-items: center;
+
+        .login {
+            display: flex;
+            font-size: 19px;
+
+            a {
+                text-decoration: none;
+                color: black;
+                padding: 3px 0;
+            }
+
+            .logar {
+                margin: 0 30px;
+            }
+
+        }
+    }
+}
+
+.logar :hover {
+    border-bottom: 1px solid black;
+    transition: ease 0.5s;
+}
+
+.cadastro :hover {
+    border-bottom: 1px solid black;
+    transition: ease 0.5s;
+}
+
+
+.cafeteria {
+    margin: 0 20%;
+
+    h1 {
+        margin-top: -100px;
+        color: white;
+        font-size: 90px;
+    }
+}
+
+
+.main_cima {
+    margin: 100px auto;
+    display: flex;
+    max-width: 1100px;
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap-reverse;
+
+
+    .imagem {
+        background: url('../img/coffee-64.gif');
+        height: 400px;
+        width: 400px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+
+        img {
+            margin-left: -140px;
+            margin-top: 100px;
+            border-radius: 10px;
+            transition: ease 0.3s;
+            box-shadow: 0px 0px 10px black;
+        }
+
+        img:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        .imagem {
+            width: 300px;
+            height: 300px;
+            margin: auto;
+
+            img {
+                width: 100px;
+                margin-left: -50px;
+            }
+        }
+
+        .texto {
+            margin: 50px auto 0;
+        }
+
+        .imagem2 {
+            width: 300px;
+            height: 500px;
+            margin: auto;
+        }
+    }
+
+    .texto {
+        width: 400px;
+        font-size: 30px;
+        padding: 20px;
+
+        p {
+            font-size: 20px;
+            margin-top: 30px;
+        }
+    }
+}
+
+.main_meio {
+    flex-wrap: wrap;
+    margin: 100px auto;
+    display: flex;
+    max-width: 1100px;
+    justify-content: space-between;
+    padding: 10px;
+
+    .imagem2 {
+        background: url('img/baixados\ \(1\).jpg');
+        height: 600px;
+        width: 400px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .imagem2 {
+            width: 300px;
+            height: 500px;
+            margin: auto;
+        }
+
+        .texto {
+            margin: 50px auto;
+        }
+    }
+
+    .texto {
+        width: 400px;
+        font-size: 30px;
+        padding: 20px;
+
+        p {
+            font-size: 20px;
+            margin-top: 30px;
+        }
+    }
+}
+
+.main_baixo {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 150px;
+
+    p {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    .imagem_cafe{
+        background: url('img/photo-1630861413071-a424a4d6d155.avif');
+        background-size: cover;
+        background-position: center;
+        width: 1000px;
+        height: 300px;
+        border-radius: 15px;
+        margin: 100px auto;
+    }
+}
+
+footer{
+    background-color: rgb(59, 46, 42);
+}
