@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bem Vindo</title>
     <link rel="stylesheet" href="BemVindo.css">
 </head>
 
@@ -29,34 +29,11 @@
                 </div>
                 <div class="login">
                     <div class="fotoPerfil" id="fotoPerfil"></div>
-                    <div id="botao"><img width="20px" src="../img/arrow_forward_ios_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></div>
+                    <div id="botao"><img width="20px"
+                            src="../img/arrow_forward_ios_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></div>
                     <div id="adicionar">
                         <label for="foto">Adicionar foto</label>
                         <input type="file" name="foto" id="foto" accept="image/*">
-                        <!-- <script>
-                            const inputFoto = document.getElementById('foto');
-                            const previewFoto = document.getElementById('preview-foto');
-                
-                            inputFoto.addEventListener('change', () => {
-                                const arquivo = inputFoto.files[0];
-                                const reader = new FileReader();
-                
-                                reader.onload = () => {
-                                    const imagem = reader.result;
-                                    localStorage.setItem('imagem', imagem);
-                                    previewFoto.style.backgroundImage = `url(${imagem})`;
-                                };
-                
-                                reader.readAsDataURL(arquivo);
-                            });
-                
-                            document.addEventListener('DOMContentLoaded', () => {
-                                const imagem = localStorage.getItem('imagem');
-                                if (imagem) {
-                                    previewFoto.style.backgroundImage = `url(${imagem})`;
-                                }
-                            });
-                        </script> -->
                     </div>
                 </div>
             </div>
@@ -108,6 +85,40 @@
                     <img width="200px" src="../img/cafe2.jpg" alt="">
                 </div>
             </div>
+            <div class="main_meio">
+                <div class="imagem2">
+                </div>
+                <div class="texto">
+                    <h1>Sobre Este Projeto</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ab unde, magni, voluptates nam eaque a soluta facere harum fugiat cumque ullam consequatur commodi natus ipsum laboriosam repellendus sunt! Distinctio.</p>
+                </div>
+            </div>
+            <div class="main_baixo">
+                <h1>História do café</h1>
+                <p>A história do café tem origem na África, onde foi usado para curar diversos males. No século XVIII, o
+                    cultivo do café foi introduzido no Brasil, inicialmente no Pará, e depois se espalhou pelo país. Na
+                    Europa, o café era inicialmente consumido como remédio e só depois se tornou uma bebida. Uma das
+                    lendas populares sobre a origem do café envolve um pastor etíope chamado Kaldi. O Ciclo do Café no
+                    Brasil, entre os séculos XIX e XX, foi um período de grande desenvolvimento econômico.</p>
+                <div class="imagem_cafe"></div>
+            </div>
+            <footer>
+                <div class="infos">
+                    <h2>Senac</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam suscipit consequatur rerum.
+                        Accusantium
+                        quae excepturi, aspernatur similique, necessitatibus ad vitae quas labore eaque quia atque eos
+                        illo
+                        repellat maxime odit.</p>
+                    <div class="redes">
+                        <div><a href=""><img width="30px" src="img/github-142-svgrepo-com.svg" alt=""></a></div>
+                        <div><a href=""><img width="30px" src="img/instagram-svgrepo-com (1).svg" alt=""></a></div>
+                        <div><a href=""><img width="30px" src="img/whatsapp-svgrepo-com.svg" alt=""></a></div>
+                        <div><a href=""><img width="30px" src="img/facebook-svgrepo-com.svg" alt=""></a></div>
+                    </div>
+                </div>
+                <div class="creditos"><a class="inspiracao" href="https://cafeterra.shop/">inspiração</a></div>
+            </footer>
         </main>
 
 
