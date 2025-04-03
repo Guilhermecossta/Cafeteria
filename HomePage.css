@@ -73,7 +73,8 @@ header {
                 a {
                     font-size: 14px;
                 }
-                .logar{
+
+                .logar {
                     margin-right: 10px;
                 }
             }
@@ -94,19 +95,20 @@ header {
 
 
 .cafeteria {
-    margin: 0 20%;
+    position: absolute;
+    top: 57%;
+    left: 19%;
+    color: white;
+    font-size: 50px;
+    transition: ease 0.8s;
+}
 
-    h1 {
-        margin-top: -100px;
-        color: white;
-        font-size: 90px;
-    }
-
-    @media screen and (max-width: 1000px) {
-        h1 {
-            font-size: 60px;
-            margin-top: -70px;
-        }
+@media screen and (max-width: 1000px) {
+    .cafeteria {
+        font-size: 40px;
+        top: 59%;
+        left: 10%;
+        transition: ease 0.8s;
     }
 }
 
@@ -120,6 +122,7 @@ header {
     justify-content: space-between;
     padding: 10px;
     flex-wrap: wrap-reverse;
+    transition: ease 0.8s;
 
 
     .imagem {
@@ -129,6 +132,7 @@ header {
         background-size: cover;
         background-position: center;
         border-radius: 10px;
+        transition: ease 0.8s;
 
         img {
             margin-left: -140px;
@@ -136,6 +140,7 @@ header {
             border-radius: 10px;
             transition: ease 0.3s;
             box-shadow: 0px 0px 10px black;
+            transition: ease 0.8s;
         }
 
         img:hover {
@@ -238,7 +243,7 @@ header {
         margin-top: 30px;
     }
 
-    .imagem_cafe{
+    .imagem_cafe {
         background: url('img/photo-1630861413071-a424a4d6d155.avif');
         background-size: cover;
         background-position: center;
@@ -253,47 +258,48 @@ header {
             display: none;
         }
 
-        p{
+        p {
             margin-bottom: 100px;
         }
     }
 }
 
-footer{
+footer {
     background-color: rgb(59, 46, 42);
     display: flex;
     justify-content: space-around;
     padding: 50px 20px;
     flex-wrap: wrap;
 
-    div{
+    div {
         width: 500px;
         color: white;
-        
-        p{
+
+        p {
             margin-top: 10px;
         }
     }
 
-    .inspiracao{
+    .inspiracao {
         text-decoration: none;
         color: white;
         font-size: 18px;
-        
+
     }
-    .inspiracao:hover{
+
+    .inspiracao:hover {
         border-bottom: 1px solid;
         padding-bottom: 3px;
     }
 }
 
-.redes{
+.redes {
     display: flex;
     width: 140px;
     margin-top: 100px;
     margin-bottom: 50px;
 
-    div{
+    div {
         margin: auto;
         text-align: center;
         align-items: center;
@@ -302,6 +308,6 @@ footer{
     }
 }
 
-.redes div:hover{
+.redes div:hover {
     transform: scale(1.2);
 }
